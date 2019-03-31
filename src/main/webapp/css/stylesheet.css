@@ -1,0 +1,17 @@
+@charset "ISO-8859-1";
+
+
+
+
+/* #Register{
+	float: right;
+} */
+#login{
+	text-align:  center;
+}
+#loginButton{
+	margin: 2% 38% ;
+}
+.container{
+	margin-top: 13%;
+}
