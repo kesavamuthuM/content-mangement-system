@@ -17,3 +17,9 @@ th, td {
 	padding: 5px;
 	text-align: left;
 }
+
+div.ex2 {
+	width: 192px;
+	height: 335px;
+	overflow: auto;
+}
