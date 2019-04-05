@@ -18,8 +18,13 @@ th, td {
 	text-align: left;
 }
 
-div.ex2 {
+.ex2 {
 	width: 192px;
 	height: 335px;
 	overflow: auto;
+}
+
+.jumbotron {
+	border: 2px solid black;
+	height: 550px;
 }
