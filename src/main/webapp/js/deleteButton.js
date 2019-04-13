@@ -5,16 +5,15 @@
 $(document)
 		.ready(
 				function() {
-					var i = 4;
+					var i = 0;
 
-					$("#submit")
-							.click(
-									function() {
-										$("#contactsId")
-												.append(
-														"<a href=\"#\" class=\"btn btn-default btn-block linkBtn\">contact 8 </a>	");
+					$("#submit").click(
+							function() {
+								$("#contactsId").append(
+										"<a href=\"#\" class=\"btn btn-default btn-block linkBtn\">contact "
+												+ `${i += 1}` + " </a>	");
 
-									});
+							});
 					$(".subJumbo")
 							.on(
 									"mouseenter",
