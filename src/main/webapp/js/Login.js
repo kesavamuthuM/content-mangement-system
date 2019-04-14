@@ -6,8 +6,7 @@ var _username = "username@gmail.com";
 var _password = "123456";
 
 const login = {
-	check : function(username, password) {
-		console.log(username + _username);
+	validate : function(username, password) {
 		if (_username === username && _password == password)
 			return true;
 		else
