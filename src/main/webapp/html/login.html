@@ -35,7 +35,8 @@
 				<div class="panel panel-default">
 					<div class="panel-body">
 						<h4 id="login">LOGIN</h4>
-						<form action="html/home.html" method="post">
+						<form action="html/home.html" method="post"
+							onsubmit="login.check(document.getElementById('email').value, document.getElementById('pwd').value)">
 							<div class="form-group">
 								<label for="email">Email address:</label> <input type="email"
 									class="form-control" id="email"
@@ -46,18 +47,19 @@
 									class="form-control" id="pwd" placeholder="Enter your password">
 							</div>
 							<br> <br>
-							<button type="submit" class="btn btn-default" id="loginButton"
-								>Login</button>
+							<button type="submit" class="btn btn-default" id="loginButton">Login</button>
+						</form>
 					</div>
 				</div>
 			</div>
-			</form>
+
 			<div class="col-md-4"></div>
 		</div>
 
 	</div>
 	<script
 		src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script src="../js/LoginHandler.js"></script>
+	<script src="../js/LoginHandler.js"></script>
+	<script src="../js/Login.js"></script>
 </body>
 </html>
