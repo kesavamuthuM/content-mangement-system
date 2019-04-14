@@ -28,3 +28,5 @@ Login.prototype.check = function(iUsername, iPassword){
 	else 
 		return "username or password you entered is wrong";
 }
+
+module.exports = Login;
