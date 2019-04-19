@@ -24,7 +24,7 @@ public class LoginValidator extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		final String username = "kesav.muthuraj@anywhere.co";
-	    final String password = "1aAcvbds";
+	    final String password = "1aAcvbds.";
 		response.setContentType("text");
 		String passedUsername = request.getParameter("username");
 		String passedPassword = request.getParameter("password");
@@ -32,7 +32,7 @@ public class LoginValidator extends HttpServlet {
 		if(username.equals(passedUsername) && password.equals(passedPassword))
 			response.getWriter().print("allow");
 		else
-			response.getWriter().print("won't allow");
+			response.getWriter().print("don't allow");
 		
 		
 	}

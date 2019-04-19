@@ -1,0 +1,25 @@
+{
+  "name": "content-mangement-system",
+  "version": "1.0.0",
+  "description": "using sinon with jasmine to makes the code awesome",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kesavamuthuM/content-mangement-system.git"
+  },
+  "author": "kesav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kesavamuthuM/content-mangement-system/issues"
+  },
+  "homepage": "https://github.com/kesavamuthuM/content-mangement-system#readme",
+  "devDependencies": {
+    "jasmine-sinon": "^0.4.0"
+  },
+  "dependencies": {
+    "jasmine-jquery": "^2.1.1"
+  }
+}
