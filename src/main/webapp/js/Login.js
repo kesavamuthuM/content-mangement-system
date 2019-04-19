@@ -4,7 +4,7 @@
 
 var _username = "kesav.muthuraj@anywhere.co";
 var _password = "1aAcvbds.";
-
+//const $ = require('../../../../spec/lib/jquery/jquery');
 const login = {
 	validate : function(username, password) {
 		if (_username === username && _password == password) {
@@ -47,7 +47,12 @@ const login = {
 											})
 
 						})
+	},
+	sampleJquery: function(){
+		$(document).ready(function(){
+			return 'hai';
+		})
 	}
 };
 
-module.exports = login;
+//module.exports = login;

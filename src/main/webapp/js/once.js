@@ -1,7 +1,7 @@
 /**
  * 
  */
-module.exports = function once(fn) {
+function once(fn) {
     var returnValue, called = false;
     return function () {
         if (!called) {

@@ -2,9 +2,9 @@
  * 
  */
 
-var sinon = require('sinon');
-var once = require('../../src/main/webapp/js/once');
-const $ = require('jquery');
+/*var sinon = require('sinon');
+var once = require('../../src/main/webapp/js/once');*/
+
 
 describe('function calling checker', function(){
 	it('calls the original function', function () {
@@ -12,7 +12,10 @@ describe('function calling checker', function(){
     var proxy = once(callback);
 
     proxy();
+    proxy();
 
-    assert(callback.called);
+    sinon.assert.called(callback);
+    sinon.assert.calledOnce(callback);
+    
 });
 })
