@@ -4,9 +4,10 @@
 
 var _username = "kesav.muthuraj@anywhere.co";
 var _password = "1aAcvbds.";
-//const $ = require('../../../../spec/lib/jquery/jquery');
+// const $ = require('../../../../spec/lib/jquery/jquery');
 const login = {
 	validate : function(username, password) {
+		alert(username + password);
 		if (_username === username && _password == password) {
 			this.requestSender();
 			return true;
@@ -23,36 +24,28 @@ const login = {
 						: username.length;
 	},
 	requestSender : function() {
+
+		$.post("/login?username=" + _username + "&password=" + _password,
+				function(responseText) {
+
+					if (responseText == "allow") {
+						window.location.href = "/html/home.html";
+					} else
+						alert('you entered the wrong username and password');
+
+				})
+
 		/*
-		 * var xhttp = new XMLHttpRequest(); xhttp.onreadystatechange =
-		 * function() { alert('status is' + this.readyState); if
-		 * (this.readyState == 4 && this.readyState == 200) this.response();
-		 * else var a = this.response(); alert(a); } alert('status is' +
-		 * xhttp.readyState); xhttp.open("GET", "/login?username=" + _username +
-		 * "&password=" + _password, true); alert('status is' +
-		 * xhttp.readyState); xhttp.send();
+		 * var passingData = { username : _username, password : _password };
+		 * //console.log(passingData);
+		 * 
+		 * $.ajax({ url : "/login", type : 'post', dataType : 'json', data :
+		 * JSON.stringify({ username : _username, password : _password }),
+		 * contentType : 'application/json', mimeType : 'application/json',
+		 * success : function(data) { if (responseText == "allow") {
+		 * window.location.href = "/html/home.html"; } else alert('you entered
+		 * the wrong username and password'); } })
 		 */
-		$(document)
-				.ready(
-						function() {
-							$
-									.post(
-											"/login?username=" + _username
-													+ "&password=" + _password,
-											function(responseText) {
-												if (responseText == "allow") {
-													window.location.href = "/html/home.html";
-												} else
-													alert('you entered the wrong username and password');
-											})
-
-						})
-	},
-	sampleJquery: function(){
-		$(document).ready(function(){
-			return 'hai';
-		})
 	}
-};
 
-//module.exports = login;
+};

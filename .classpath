@@ -18,5 +18,8 @@
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/user.FULL330-WIN.004/jarFiles/jackson-annotations-2.9.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user.FULL330-WIN.004/jarFiles/jackson-databind-2.9.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user.FULL330-WIN.004/jarFiles/jackson-core-2.9.8-sources.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

@@ -7,7 +7,7 @@ var once = require('../../src/main/webapp/js/once');*/
 
 
 describe('function calling checker', function(){
-	it('calls the original function', function () {
+	it('should calls the original function only once', function () {
     var callback = sinon.fake();
     var proxy = once(callback);
 

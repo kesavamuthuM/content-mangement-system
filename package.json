@@ -17,10 +17,11 @@
   },
   "homepage": "https://github.com/kesavamuthuM/content-mangement-system#readme",
   "devDependencies": {
+    "jasmine-ajax": "^4.0.0",
     "jasmine-sinon": "^0.4.0"
   },
   "dependencies": {
-    "jasmine-jquery": "^2.1.1",
+    "chai": "^4.2.0",
     "sinon": "^7.3.2"
   }
 }
