@@ -3,13 +3,14 @@
  */
 
 $(document).ready(function(){
+	$('h3').append(" "+ localStorage.getItem('name'));	
 	$("#submit").on('click', function(){
-		//var fd = new FormData();
-		const _username = $('#username').val();
-		const _email = $('#exampleInputEmail1').val();
-		const _organisation = $('#organisation').val();
-		const _contact_no = $('#contact').val();
-		const _gender = $('input[name="gender"]:checked').val();
+		var jsonData = new Object();
+		jsonData.username = $('#username').val();
+		jsonData.email = $('#exampleInputEmail1').val();
+		jsonData.organisation = $('#organisation').val();
+		jsonData.contact_no = $('#contact').val();
+		jsonData.gender = $('input[name="gender"]:checked').val();
 		
 	/*	$.post("/dataCollector", {username: _username,
 			email: _email,
