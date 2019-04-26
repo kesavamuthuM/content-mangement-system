@@ -5,8 +5,10 @@
 $(document).ready(function(){
 	$('h3').append(" "+ localStorage.getItem('name'));	
 	$("#submit").on('click', function(){
+		var Username = $('#username').val();
+		localStorage.setItem('username', Username);
 		var jsonData = new Object();
-		jsonData.username = $('#username').val();
+		jsonData.username = Username;
 		jsonData.email = $('#exampleInputEmail1').val();
 		jsonData.organisation = $('#organisation').val();
 		jsonData.contact_no = $('#contact').val();

@@ -6,11 +6,11 @@ $(document)
 		.ready(
 				function() {
 					var i = 0;
-
+					
 					$("#submit").click(
 							function() {
 								$("#contactsId").append(
-										"<a href=\"#\" class=\"btn btn-default btn-block linkBtn\">contact "
+										"<a href=\"#\" class=\"btn btn-default btn-block linkBtn\">contact "+ localStorage.getItem('username')
 												+ `${i += 1}` + " </a>	");
 
 							});
@@ -29,3 +29,4 @@ $(document)
 										})
 									});
 				});
+//this is delete button worker
