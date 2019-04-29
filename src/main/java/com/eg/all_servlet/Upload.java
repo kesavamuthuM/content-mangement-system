@@ -23,6 +23,7 @@ public class Upload extends HttpServlet {
 		Map<String, List<BlobKey>> blobs = blobstoreService.getUploads(req);
 		List<BlobKey> blobKeys = blobs.get("myFile");
 
+		System.out.println(blobKeys.get(0));
 		if (blobKeys == null || blobKeys.isEmpty()) {
 			res.sendRedirect("/");
 		} else {

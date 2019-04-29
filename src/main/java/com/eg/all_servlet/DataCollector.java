@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.eg.entities.DatastoreAccessor;
 import com.eg.pojo.UserDetailsPojo;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -18,10 +19,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class DataCollector extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+
     public DataCollector() {
         super();
 
@@ -30,16 +28,16 @@ public class DataCollector extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("yeah we reach here");
 		BufferedReader br = new BufferedReader(new InputStreamReader(request.getInputStream()));
 		String json = "";
 		if (br != null) {
 			json = br.readLine();
 		}
-		System.out.println(json);
 		ObjectMapper mapper = new ObjectMapper();
 		UserDetailsPojo userdetail = mapper.readValue(json, UserDetailsPojo.class);
-		System.out.println(userdetail);
+		DatastoreAccessor accessor = new DatastoreAccessor();
+		accessor.storingDataToDatastore(userdetail.getUsername(), userdetail.getEmail(), userdetail.getOrganisation(),
+				userdetail.getContactNO(), userdetail.getGender());
 
 	}
 

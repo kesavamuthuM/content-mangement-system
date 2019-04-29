@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import com.eg.entities.Addition;
+
 public class AdditionTest {
 	Addition add = new Addition();
 	@Test

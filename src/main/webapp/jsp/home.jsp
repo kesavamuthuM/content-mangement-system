@@ -177,7 +177,7 @@
 					</form>
 					<div class="form-group">
 						<form id="image-submitter"
-							action="<%=blobstoreService.createUploadUrl("/upload")%>"
+							onchange="<%=blobstoreService.createUploadUrl("/upload")%>"
 							method="post" enctype="multipart/form-data">
 							<label for="exampleInputFile">Image</label> <input type="file"
 								id="exampleInputFile">
