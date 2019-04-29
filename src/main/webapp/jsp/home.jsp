@@ -1,12 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    <%@ page import="com.google.appengine.api.blobstore.BlobstoreServiceFactory" %>
-<%@ page import="com.google.appengine.api.blobstore.BlobstoreService" %>
+	pageEncoding="ISO-8859-1"%>
+<%@ page
+	import="com.google.appengine.api.blobstore.BlobstoreServiceFactory"%>
+<%@ page import="com.google.appengine.api.blobstore.BlobstoreService"%>
 
 <%
-    BlobstoreService blobstoreService = BlobstoreServiceFactory.getBlobstoreService();
+	BlobstoreService blobstoreService = BlobstoreServiceFactory.getBlobstoreService();
 %>
-    
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,7 +49,7 @@
 				<li role="presentation" id="logout"><a href="/html/login.html">Logout</a></li>
 			</ul>
 		</nav>
-		<h3 class="text-muted" >Welcome</h3>
+		<h3 class="text-muted">Welcome</h3>
 	</div>
 
 	<!-- form begins here -->
@@ -139,7 +140,7 @@
 				<div class="jumbotron"
 					style="border: 2px solid black; max-height: 600px; height: 550px;">
 
-					<form method="post" id="thirdsectionform" >
+					<form method="post" id="thirdsectionform">
 						<div class="form-group" style="position: relative;">
 							<label for="exampleInputEmail1">Username</label> <input
 								type="text" name="username" id="username" class="form-control"
@@ -157,7 +158,8 @@
 						</div>
 						<div class="formt-group">
 							<label for="contact-no">Contact no.</label> <input type="number"
-								name="contact" id="contact" class="form-control" placeholder="contact-no">
+								name="contact" id="contact" class="form-control"
+								placeholder="contact-no">
 						</div>
 
 						<div class="formt-group"
@@ -168,17 +170,21 @@
 						<div class="radio" id="Gender" style="display: inline;">
 
 							<label> <input type="radio" name="gender" value="male"
-								style="text-align: right;" > Male
+								style="text-align: right;"> Male
 							</label> <label> <input type="radio" name="gender" value="female">Female
 							</label>
 						</div>
-						<div class="form-group">
+					</form>
+					<div class="form-group">
+						<form id="image-submitter"
+							action="<%=blobstoreService.createUploadUrl("/upload")%>"
+							method="post" enctype="multipart/form-data">
 							<label for="exampleInputFile">Image</label> <input type="file"
 								id="exampleInputFile">
 							<h5 class="help-block">only png and jpg allowed</h5>
+						</form>
+					</div>
 
-							</div>
-					</form>
 
 					<button type="button" value="submit" class="btn btn-default"
 						id="submit">Submit</button>
@@ -193,7 +199,7 @@
 	<script
 		src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript" src="../js/deleteButton.js"></script>
-	<script type="text/javascript" src ="../js/InitialDataCollector.js">
+	<script type="text/javascript" src="../js/InitialDataCollector.js">
 		
 	</script>
 </body>

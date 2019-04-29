@@ -29,11 +29,16 @@ $(document).ready(function(){
 		
 		alert(converterData);*/
 		
-		$()
-		
+			$('#image-submitter').submit();
+		/*alert($('#image-submitter').attr('action'));
 		
 		$.ajax({
-			url: '/dataCollector',
+			url: $('#image-submitter').attr('action'),
+			type: post
+		})
+		*/
+		$.ajax({
+			url: '/data',
 			type: 'post',
 			data: jsonData,
 			contentType: 'application/json',
