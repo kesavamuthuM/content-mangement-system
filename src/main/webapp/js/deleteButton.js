@@ -29,8 +29,3 @@ $(document)
 										})
 									});
 				});
-<<<<<<< HEAD
-//this is delete button worker
-=======
-//another comments
->>>>>>> jstestcase
