@@ -38,6 +38,7 @@ public class DataCollector extends HttpServlet {
 		DatastoreAccessor accessor = new DatastoreAccessor();
 		accessor.storingDataToDatastore(userdetail.getUsername(), userdetail.getEmail(), userdetail.getOrganisation(),
 				userdetail.getContactNO(), userdetail.getGender());
+		response.getWriter().print(userdetail.getUsername());
 
 	}
 

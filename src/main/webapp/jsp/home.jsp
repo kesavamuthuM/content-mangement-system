@@ -61,7 +61,7 @@
 				<div class="jumbotron block text-center subJumbo">
 					<h2>All Contact Details</h2>
 					<br>
-					<div class="well"
+					<div class="well" id="contactCollections"
 						style="padding: 13%; max-height: 300px; overflow: auto;">
 						<div id="contactsId" style="">
 
@@ -140,7 +140,7 @@
 				<div class="jumbotron"
 					style="border: 2px solid black; max-height: 600px; height: 550px;">
 
-					<form method="post" id="thirdsectionform">
+					<form id="firstForm" method="post" id="thirdsectionform">
 						<div class="form-group" style="position: relative;">
 							<label for="exampleInputEmail1">Username</label> <input
 								type="text" name="username" id="username" class="form-control"

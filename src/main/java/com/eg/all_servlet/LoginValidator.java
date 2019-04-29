@@ -27,9 +27,7 @@ public class LoginValidator extends HttpServlet {
 
 		response.setContentType("text/plain");
 		if (username.equals(passedUsername) && password.equals(passedPassword))
-
 			response.getWriter().print("allow");
-
 		else
 			response.getWriter().print("don't allow");
 	}
